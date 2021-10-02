@@ -8,3 +8,16 @@
 #
 # Make sure that you add type hints to the function paramter and return value
 # changed 
+
+import typing as t
+
+def avg_calc(grades: list[float]) -> float:
+    if len(grades) == 0:
+        raise Exception('expected a non-empty list')
+
+    sum: float = 0.0
+    for g in grades:
+        print('inside avg_cal')
+        print(g)
+        sum += g         
+    return round(sum/len(grades),2)
